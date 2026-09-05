@@ -1,6 +1,6 @@
 # Usage Ticker Reloaded
 
-![Mod Version](https://img.shields.io/badge/version-0.0.1-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.2-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-orange) ![Side](https://img.shields.io/badge/Client-side-yellow)
+![Mod Version](https://img.shields.io/badge/version-1.0.0-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.2-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-orange) ![Side](https://img.shields.io/badge/Client-side-yellow)
 
 **Usage Ticker Reloaded** is a lightweight client-side Fabric mod that replicates the popular “Usage Ticker” feature from the Quark mod for modern Minecraft versions (≥26.2). Since [the original Usage Ticker mod](https://modrinth.com/mod/usage-ticker) hasn't been updated for a long time, I made this similar mod.It displays the icon and total count of the item you're holding, besides your hotbar.
 
@@ -64,6 +64,7 @@ Will be shown in the future.
 
 | Minecraft       | Fabric Loader | Status                                                                      |
 |:----------------|:--------------|:----------------------------------------------------------------------------|
+| 26.3            | 0.19.3+       | ❔ Maybe work                                                              |
 | 26.2            | 0.19.3+       | ✅ Fully tested                                                             |
 | 26.1            | 0.19.3+       | ❔ Maybe work                                                               |
 | 1.21.1 or below | -             | ⚠️ You should use [the original mod](https://modrinth.com/mod/usage-ticker) |
@@ -73,9 +74,6 @@ Will be shown in the future.
 
 **Q: Will you support versions below 26.2 or other loaders?**  
 A: I won't, since I don't have time. However, if you have the ability to do that, feel free to [submit a pull request](https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded/pulls).
-
-**Q: Does this mod work on servers?**  
-A: No,it won't do anything.
 
 **Q: Can I change the position/color of the counter?**  
 A: Currently you need to modify the source constants (see above). A configuration file is planned for a future release.

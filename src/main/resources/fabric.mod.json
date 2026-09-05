@@ -3,29 +3,22 @@
 	"id": "usage-ticker-reloaded",
 	"version": "${version}",
 	"name": "Usage Ticker Reloaded",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Show the amount in your inventory left of the item you handing.",
 	"authors": [
-		"No Namer"
+		"No Namer","Another No Namer"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded",
+		"issues": "https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/usage-ticker-reloaded/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"client": [
 			"com.nonamer.usagetickerreloaded.client.UsageTickerReloadedClient"
 		]
 	},
-	"mixins": [
-		"usage-ticker-reloaded.mixins.json",
-		{
-			"config": "usage-ticker-reloaded.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": ">=26.1",
