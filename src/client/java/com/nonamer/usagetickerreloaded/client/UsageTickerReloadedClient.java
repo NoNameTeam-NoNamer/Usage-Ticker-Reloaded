@@ -103,14 +103,14 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 	}
 
 	private void drawItemWithCount(GuiGraphicsExtractor context, ItemStack stack, int count, int x, int y) {
-		String countText = String.valueOf(count);
-		var font = Minecraft.getInstance().font;
-		int textWidth = font.width(countText);
 		context.item(stack, x, y);
-
-
-		int textX = x + ITEM_SIZE - 3 - textWidth;
-		int textY = y + ITEM_SIZE - 11 - TEXT_OFFSET;
-		context.text(font, Component.literal(countText), textX, textY, 0xFFFFFFFF, true);
+		if(count>1){
+			String countText = String.valueOf(count);
+			var font = Minecraft.getInstance().font;
+			int textWidth = font.width(countText);
+			int textX = x + ITEM_SIZE - 3 - textWidth;
+			int textY = y + ITEM_SIZE - 11 - TEXT_OFFSET;
+			context.text(font, Component.literal(countText), textX, textY, 0xFFFFFFFF, true);
+		}
 	}
 }
