@@ -62,11 +62,11 @@ Will be shown in the future.
 
 ## 📋 Compatibility
 
-| Minecraft       | Fabric Loader | Fabric API | Status                                                                      |
-|:----------------|:--------------|:-----------|:----------------------------------------------------------------------------|
-| 26.2            | 0.19.3+       | latest     | ✅ Fully tested                                                             |
-| 26.1            | 0.19.3+       | latest     | ✅ Should work                                                              |
-| 1.21.1 or below | -             | -          | ⚠️ You should use [the original mod](https://modrinth.com/mod/usage-ticker) |
+| Minecraft       | Fabric Loader | Status                                                                      |
+|:----------------|:--------------|:----------------------------------------------------------------------------|
+| 26.2            | 0.19.3+       | ✅ Fully tested                                                             |
+| 26.1            | 0.19.3+       | ❔ Maybe work                                                               |
+| 1.21.1 or below | -             | ⚠️ You should use [the original mod](https://modrinth.com/mod/usage-ticker) |
 ---
 
 ## ❓ FAQ
