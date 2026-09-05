@@ -43,17 +43,6 @@ The built JAR will be placed in `build/libs/`.
 
 ---
 
-## 🎮 Usage
-
-Simply **hold any item** in your main hand (or offhand). The icon and the total count across your entire inventory will appear:
-
--   **Right side** – main hand item.
--   **Left side** – offhand item, if it's different from the main hand.
-
-You can tweak the display position by modifying the constants at the top of `UsageTickerReloadedClient.java` (`PADDING`, `VERTICAL_OFFSET`, `TEXT_OFFSET`).
-
----
-
 ## 🖼️ Screenshots
 
 Will be shown in the future.
