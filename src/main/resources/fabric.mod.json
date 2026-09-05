@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "usage-ticker-reloaded",
+	"version": "${version}",
+	"name": "Usage Ticker Reloaded",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"No Namer"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/usage-ticker-reloaded/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.nonamer.usagetickerreloaded.client.UsageTickerReloadedClient"
+		]
+	},
+	"mixins": [
+		"usage-ticker-reloaded.mixins.json",
+		{
+			"config": "usage-ticker-reloaded.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
