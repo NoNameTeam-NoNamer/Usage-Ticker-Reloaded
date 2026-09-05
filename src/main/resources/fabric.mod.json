@@ -3,11 +3,12 @@
 	"id": "usage-ticker-reloaded",
 	"version": "${version}",
 	"name": "Usage Ticker Reloaded",
-	"description": "Show the amount in your inventory left of the item you handing.",
+	"description": "A lightweight client-side mod that shows the remaining count of the item you are holding in your inventory.",
 	"authors": [
 		"No Namer","Another No Namer"
 	],
 	"contact": {
+		"homepage": "https://modrinth.com/mod/usage-ticker-reloaded",
 		"sources": "https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded",
 		"issues": "https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded/issues"
 	},
