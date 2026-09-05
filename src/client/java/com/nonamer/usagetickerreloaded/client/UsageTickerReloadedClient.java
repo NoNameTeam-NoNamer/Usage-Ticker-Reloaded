@@ -18,15 +18,13 @@ import com.nonamer.usagetickerreloaded.UsageTickerReloaded;
 public class UsageTickerReloadedClient implements ClientModInitializer {
 
 	// ====== 显示位置调节参数（可自行修改） ======
-	private static final int ITEM_SIZE = 16;
-	private static final int TEXT_OFFSET = 2;
-	private static final int PADDING = 10;
-	private static final int VERTICAL_OFFSET = 30;
+	private static final int ITEM_SIZE = 20;
+	private static final int TEXT_OFFSET = 0;
 
 	@Override
 	public void onInitializeClient() {
 		// 使用新的 Hud API 来注册你的渲染元素
-		// 这里选择在聊天框之前渲染，你也可以换成其他位置[reference:2][reference:3]
+		// 这里选择在聊天框之前渲染，你也可以换成其他位置
 		HudElementRegistry.attachElementBefore(
 				VanillaHudElements.CHAT,
 				Identifier.fromNamespaceAndPath(UsageTickerReloaded.MOD_ID, "item_counter"),
@@ -59,15 +57,34 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 
 					int screenWidth = context.guiWidth();
 					int screenHeight = context.guiHeight();
+					final int HOTBAR_WIDTH = 182;
 
-					// ---- 左侧绘制 ----
-					if (!mainItem.isEmpty()) {
-						drawItemWithCount(context, mainItem, mainCount, screenWidth - PADDING - ITEM_SIZE, screenHeight - VERTICAL_OFFSET);
+					int hotbarLeft = (screenWidth - HOTBAR_WIDTH) / 2;
+					int hotbarRight = hotbarLeft + HOTBAR_WIDTH;
+					int y = screenHeight - 19;
+
+					net.minecraft.world.entity.HumanoidArm mainArm = player.getMainArm();
+					boolean isRightHanded = (mainArm == net.minecraft.world.entity.HumanoidArm.RIGHT);
+
+					int mainHandX, offHandX;
+					if (isRightHanded) {
+						// 右手玩家：主手在右，副手在左
+						mainHandX = hotbarRight + 10;
+						offHandX = hotbarLeft - ITEM_SIZE - 30;
+					} else {
+						// 左手玩家：主手在左，副手在右
+						mainHandX = hotbarLeft - ITEM_SIZE - 2;
+						offHandX = hotbarRight + 42;
 					}
 
-					// ---- 右侧绘制 ----
+// ---- 主手侧绘制 ----
+					if (!mainItem.isEmpty()) {
+						drawItemWithCount(context, mainItem, mainCount, mainHandX, y);
+					}
+
+// ---- 副手侧绘制 ----
 					if (!offItem.isEmpty()) {
-						drawItemWithCount(context, offItem, offCount, PADDING, screenHeight - VERTICAL_OFFSET);
+						drawItemWithCount(context, offItem, offCount, offHandX, y);
 					}
 				}
 		);
@@ -86,14 +103,14 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 	}
 
 	private void drawItemWithCount(GuiGraphicsExtractor context, ItemStack stack, int count, int x, int y) {
-		// 绘制物品 —— 使用 item 方法
-		context.item(stack, x, y);
-
 		String countText = String.valueOf(count);
 		var font = Minecraft.getInstance().font;
 		int textWidth = font.width(countText);
-		int textX = x + (ITEM_SIZE - textWidth) / 2;
-		int textY = y + ITEM_SIZE + TEXT_OFFSET;
+		context.item(stack, x, y);
+
+
+		int textX = x + ITEM_SIZE - 3 - textWidth;
+		int textY = y + ITEM_SIZE - 11 - TEXT_OFFSET;
 		context.text(font, Component.literal(countText), textX, textY, 0xFFFFFFFF, true);
 	}
 }
