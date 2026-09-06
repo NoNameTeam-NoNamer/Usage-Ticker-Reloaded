@@ -18,6 +18,9 @@
 	"entrypoints": {
 		"client": [
 			"com.nonamer.usagetickerreloaded.client.UsageTickerReloadedClient"
+		],
+		"modmenu": [
+			"com.nonamer.usagetickerreloaded.client.ModMenuIntegration"
 		]
 	},
 	"depends": {
@@ -25,5 +28,8 @@
 		"minecraft": ">=26.1",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"recommends": {
+		"modmenu": "*"
 	}
 }

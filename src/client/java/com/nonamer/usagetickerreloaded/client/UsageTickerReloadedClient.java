@@ -1,5 +1,9 @@
 package com.nonamer.usagetickerreloaded.client;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -14,22 +18,36 @@ import net.minecraft.resources.Identifier;
 
 import com.nonamer.usagetickerreloaded.UsageTickerReloaded;
 
+
 @Environment(EnvType.CLIENT)
 public class UsageTickerReloadedClient implements ClientModInitializer {
 
-	// ====== 显示位置调节参数（可自行修改） ======
+	public static String customDisplayText = null;
+
+	private void loadCustomDisplayText() {
+		Path configPath = Paths.get("config/usage-ticker-reloaded/custom_display.txt");
+		if (Files.exists(configPath)) {
+			try {
+				customDisplayText = new String(Files.readAllBytes(configPath));
+			} catch (IOException ignored) {
+				customDisplayText = null;
+			}
+		} else {
+			customDisplayText = null;
+		}
+	}
+	// =========Customize available in the future!==========
 	private static final int ITEM_SIZE = 20;
 	private static final int TEXT_OFFSET = 0;
 
 	@Override
 	public void onInitializeClient() {
-		// 使用新的 Hud API 来注册你的渲染元素
-		// 这里选择在聊天框之前渲染，你也可以换成其他位置
+		//For debug
+		loadCustomDisplayText();
 		HudElementRegistry.attachElementBefore(
 				VanillaHudElements.CHAT,
 				Identifier.fromNamespaceAndPath(UsageTickerReloaded.MOD_ID, "item_counter"),
 				(context, _) -> {
-					// 你的 HUD 渲染逻辑
 					Minecraft client = Minecraft.getInstance();
 					Player player = client.player;
 					if (player == null) return;
@@ -39,7 +57,6 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 
 					if (mainHand.isEmpty() && offHand.isEmpty()) return;
 
-					// ---- 决定左右显示什么 ----
 					ItemStack mainItem = mainHand;
 					ItemStack offItem = offHand;
 
@@ -68,21 +85,16 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 
 					int mainHandX, offHandX;
 					if (isRightHanded) {
-						// 右手玩家：主手在右，副手在左
-						mainHandX = hotbarRight + 10;
+						mainHandX = hotbarRight + 6;
 						offHandX = hotbarLeft - ITEM_SIZE - 30;
 					} else {
-						// 左手玩家：主手在左，副手在右
-						mainHandX = hotbarLeft - ITEM_SIZE - 2;
-						offHandX = hotbarRight + 42;
+						mainHandX = hotbarLeft - ITEM_SIZE;
+						offHandX = hotbarRight + 34;
 					}
-
-// ---- 主手侧绘制 ----
 					if (!mainItem.isEmpty()) {
 						drawItemWithCount(context, mainItem, mainCount, mainHandX, y);
 					}
 
-// ---- 副手侧绘制 ----
 					if (!offItem.isEmpty()) {
 						drawItemWithCount(context, offItem, offCount, offHandX, y);
 					}
@@ -104,11 +116,25 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 
 	private void drawItemWithCount(GuiGraphicsExtractor context, ItemStack stack, int count, int x, int y) {
 		context.item(stack, x, y);
-		if(count>1){
-			String countText = String.valueOf(count);
+
+		String countText;
+		if (customDisplayText != null && !customDisplayText.trim().isEmpty()) {
+			countText = customDisplayText;
+		} else if (count > 1) {
+			countText = String.valueOf(count);
+		} else {
+			countText = "";
+		}
+
+		if (!countText.isEmpty()) {
 			var font = Minecraft.getInstance().font;
 			int textWidth = font.width(countText);
-			int textX = x + ITEM_SIZE - 3 - textWidth;
+			int screenWidth = context.guiWidth();
+			boolean isRightSide = x > screenWidth / 2;
+			int textX = x;
+			if (!isRightSide) {
+				textX += ITEM_SIZE - 3 - textWidth;
+			}
 			int textY = y + ITEM_SIZE - 11 - TEXT_OFFSET;
 			context.text(font, Component.literal(countText), textX, textY, 0xFFFFFFFF, true);
 		}
