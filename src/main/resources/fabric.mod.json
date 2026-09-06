@@ -30,6 +30,7 @@
 		"fabric-api": "*"
 	},
 	"recommends": {
-		"modmenu": "*"
+		"modmenu": ">=18.0.0",
+		"yet_another_config_lib_v3": ">=3.9.0"
 	}
 }

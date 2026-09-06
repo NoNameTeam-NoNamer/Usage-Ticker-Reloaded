@@ -17,6 +17,10 @@
 -   🎨 **Clean HUD integration** – Renders alongside vanilla elements, respecting your GUI scale.
 
 ---
+## ⚙️ Configs
+
+-   **Comma Separator Available**
+---
 
 ## 📥 Installation
 
@@ -74,7 +78,6 @@ A: Not yet, but support for that (with a config toggle) is on the roadmap.
 
 ## ✒️ Developing
 
--   Config support(Debug showcase input now available)
 -   Shulker box and bundle count support
 -   Secret ideas...
 

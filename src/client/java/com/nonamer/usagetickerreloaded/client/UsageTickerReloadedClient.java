@@ -1,9 +1,6 @@
 package com.nonamer.usagetickerreloaded.client;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.math.BigInteger;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -22,28 +19,23 @@ import com.nonamer.usagetickerreloaded.UsageTickerReloaded;
 @Environment(EnvType.CLIENT)
 public class UsageTickerReloadedClient implements ClientModInitializer {
 
+	public static Config config;
 	public static String customDisplayText = null;
 
-	private void loadCustomDisplayText() {
-		Path configPath = Paths.get("config/usage-ticker-reloaded/custom_display.txt");
-		if (Files.exists(configPath)) {
-			try {
-				customDisplayText = new String(Files.readAllBytes(configPath));
-			} catch (IOException ignored) {
-				customDisplayText = null;
-			}
-		} else {
-			customDisplayText = null;
-		}
+	private void loadConfig() {
+		config = Config.load();
+		customDisplayText = config.customText.isEmpty() ? null : config.customText;
 	}
+
+
 	// =========Customize available in the future!==========
 	private static final int ITEM_SIZE = 20;
 	private static final int TEXT_OFFSET = 0;
 
 	@Override
 	public void onInitializeClient() {
-		//For debug
-		loadCustomDisplayText();
+		loadConfig();
+
 		HudElementRegistry.attachElementBefore(
 				VanillaHudElements.CHAT,
 				Identifier.fromNamespaceAndPath(UsageTickerReloaded.MOD_ID, "item_counter"),
@@ -114,14 +106,82 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 		return total;
 	}
 
+	private String formatCount(Number num) {
+		if (num == null) return "0";
+
+		String str;
+		boolean negative = false;
+		if (num instanceof BigInteger big) {
+			if (big.signum() < 0) {
+				negative = true;
+				big = big.abs();
+			}
+			str = big.toString();
+		} else {
+			long val = num.longValue();
+			if (val < 0) {
+				negative = true;
+				val = -val;
+			}
+			str = Long.toString(val);
+		}
+
+		if (str.equals("0")) return "0";
+		int len = str.length();
+		if (len <= 4) return (negative ? "-" : "") + str;
+
+		String[] units = {"", "k", "M", "G", "T", "P", "E", "Z", "Y", "R", "Q"};
+		int unitIndex = (len - 1) / 3;
+		if (unitIndex >= units.length) return formatScientific(str, negative);
+
+		int intDigits = len - unitIndex * 3;
+		int decimalDigits = 3 - intDigits;
+		if (decimalDigits < 0) decimalDigits = 0;
+		if (intDigits + decimalDigits > len) decimalDigits = len - intDigits;
+
+		String intPart = str.substring(0, intDigits);
+		String decPart = "";
+		if (decimalDigits > 0) {
+			decPart = str.substring(intDigits, intDigits + decimalDigits);
+		}
+
+		StringBuilder result = new StringBuilder();
+		if (negative) result.append("-");
+		result.append(intPart);
+		if (!decPart.isEmpty()) {
+			String sep = config.useCommaSeparator ? "," : ".";
+			result.append(sep).append(decPart);
+		}
+		result.append(units[unitIndex]);
+		return result.toString();
+	}
+
+	private String formatScientific(String str, boolean negative) {
+		int exponent = str.length() - 1;
+		String mantissa = str.substring(0, 1);
+		if (str.length() > 1) {
+			mantissa += "." + str.charAt(1);
+		}
+		StringBuilder result = new StringBuilder();
+		if (negative) result.append("-");
+		result.append(mantissa).append("e").append(exponent);
+		return result.toString();
+	}
+
 	private void drawItemWithCount(GuiGraphicsExtractor context, ItemStack stack, int count, int x, int y) {
 		context.item(stack, x, y);
 
 		String countText;
 		if (customDisplayText != null && !customDisplayText.trim().isEmpty()) {
-			countText = customDisplayText;
+			try {
+				BigInteger testValue = new BigInteger(customDisplayText.trim());
+				countText = formatCount(testValue); // formatCount 支持 BigInteger
+			} catch (NumberFormatException e) {
+				// 不是有效数字，按原样显示
+				countText = customDisplayText;
+			}
 		} else if (count > 1) {
-			countText = String.valueOf(count);
+			countText = formatCount(count);
 		} else {
 			countText = "";
 		}
@@ -134,6 +194,8 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 			int textX = x;
 			if (!isRightSide) {
 				textX += ITEM_SIZE - 3 - textWidth;
+			} else {
+				textX += 3;
 			}
 			int textY = y + ITEM_SIZE - 11 - TEXT_OFFSET;
 			context.text(font, Component.literal(countText), textX, textY, 0xFFFFFFFF, true);
