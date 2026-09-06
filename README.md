@@ -1,6 +1,6 @@
 # Usage Ticker Reloaded
 
-![Mod Version](https://img.shields.io/badge/version-1.0.0-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-orange) ![Side](https://img.shields.io/badge/Client-side-yellow) ![Config](https://img.shields.io/badge/Config-Available-purple)
+![Mod Version](https://img.shields.io/badge/version-1.1.0-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-orange) ![Side](https://img.shields.io/badge/Client-side-yellow) ![Config](https://img.shields.io/badge/Config-Available-purple)
 
 **Usage Ticker Reloaded** is a lightweight client-side Fabric mod that replicates the popular “Usage Ticker” feature from the Quark mod for modern Minecraft versions (≥26.1). Since [the original Usage Ticker mod](https://modrinth.com/mod/usage-ticker) hasn't been updated for a long time, I made this similar mod.It displays the icon and total count of the item you're holding, besides your hotbar.
 
