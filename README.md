@@ -1,6 +1,6 @@
 # Usage Ticker Reloaded
 
-![Mod Version](https://img.shields.io/badge/version-1.1.0-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-orange) ![Side](https://img.shields.io/badge/Client-side-yellow) ![Config](https://img.shields.io/badge/Config-Available-purple)
+![Mod Version](https://img.shields.io/badge/version-1.1.0-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-yellowgreen) ![Side](https://img.shields.io/badge/Client-side-00bbee) ![Config](https://img.shields.io/badge/Config-Available-purple)
 
 **Usage Ticker Reloaded** is a lightweight client-side Fabric mod that replicates the popular “Usage Ticker” feature from the Quark mod for modern Minecraft versions (≥26.1). Since [the original Usage Ticker mod](https://modrinth.com/mod/usage-ticker) hasn't been updated for a long time, I made this similar mod.It displays the icon and total count of the item you're holding, besides your hotbar.
 
@@ -19,7 +19,8 @@
 ---
 ## ⚙️ Configs
 
--   **Comma Separator Available**
+-   **Comma separator available**
+-   **NBT match available(Developing version)**
 ---
 
 ## 📥 Installation
@@ -47,12 +48,6 @@ The built JAR will be placed in `build/libs/`.
 
 ---
 
-## 🖼️ Screenshots
-
-Will be shown in the future.
-
----
-
 ## 📋 Compatibility
 
 | Minecraft       | Fabric Loader | Status                                                                      |
@@ -69,7 +64,7 @@ Will be shown in the future.
 A: I won't, since I don't have time. However, if you have the ability to do that, feel free to [submit a pull request](https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded/pulls).
 
 **Q: Can I change the position/color of the counter?**  
-A: Currently you need to modify the source constants (see above). A configuration file is planned for a future release.
+A: You can't do it now. This function may come in a future version.
 
 **Q: Does it count items inside shulker boxes and bundles?**  
 A: Not yet, but support for that (with a config toggle) is on the roadmap.
