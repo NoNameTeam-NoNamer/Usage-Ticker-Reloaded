@@ -14,8 +14,8 @@ repositories {
 		url = "https://maven.fabricmc.net/"
 	}
 	maven {
-		name 'Xander Maven'
-		url 'https://maven.isxander.dev/releases'
+		name = 'Xander Maven'
+		url = 'https://maven.isxander.dev/releases'
 	}
 }
 

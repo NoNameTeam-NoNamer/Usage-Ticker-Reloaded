@@ -1,0 +1,21 @@
+{
+  "modmenu.nameTranslation.usage-ticker-reloaded": "使用状況ティッカー リメイク版",
+  "modmenu.summaryTranslation.usage-ticker-reloaded": "手持ちアイテムのインベントリ内の合計数を表示します。",
+  "modmenu.descriptionTranslation.usage-ticker-reloaded": "手持ちアイテムのインベントリ内の残り数を表示する軽量なクライアントサイドMODです。",
+  "yacl3.config.usage-ticker-reloaded.title": "使用状況ティッカー 設定",
+  "yacl3.config.usage-ticker-reloaded.general": "一般",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "カンマを小数点として使用",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "小数点に '.' の代わりに ',' を使用します。",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "NBTを一致させる",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "カウント時にアイテムのNBTが一致することを要求します。",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.name": "コンテナ階層制限",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.description": "コンテナ（シュルカーボックス、バンドル）内をスキャンする最大の深さ。深さ制限に達すると数字の前に '*' が付きます。0 に設定するとコンテナのカウントを無効にします。",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.name": "コンテナノード制限",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "コンテナ内で探索するノードの最大数。制限に達すると末尾に '+' が付きます。0 に設定するとコンテナのカウントを無効にします。",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "デバッグ表示テキスト",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "数値を入力して書式をテストします（例: 1234567 → 1.23M）。空欄でデフォルトになります。",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "メインカウンターの色",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "メインアイテムカウントテキストの色（RGBA）。",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "コンテナカウンターの色",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "コンテナアイテムカウントテキストの色（RGBA）。"
+}

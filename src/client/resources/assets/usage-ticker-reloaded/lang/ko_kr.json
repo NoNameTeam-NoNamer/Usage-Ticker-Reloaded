@@ -1,0 +1,21 @@
+{
+  "modmenu.nameTranslation.usage-ticker-reloaded": "사용량 티커 리메이크판",
+  "modmenu.summaryTranslation.usage-ticker-reloaded": "인벤토리에 있는 현재 들고 있는 아이템의 개수를 표시합니다.",
+  "modmenu.descriptionTranslation.usage-ticker-reloaded": "현재 들고 있는 아이템의 인벤토리 내 남은 개수를 표시하는 경량 클라이언트 사이드 모드입니다.",
+  "yacl3.config.usage-ticker-reloaded.title": "사용량 티커 리메이크판 설정",
+  "yacl3.config.usage-ticker-reloaded.general": "일반",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "쉼표를 소수점으로 사용",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "소수점 구분 기호로 '.' 대신 ','를 사용합니다.",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "NBT 일치",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "집계 시 아이템의 NBT가 일치해야 합니다.",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.name": "컨테이너 깊이 제한",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.description": "컨테이너(셜커 상자, 번들) 내부를 탐색할 최대 중첩 깊이. 깊이 제한에 도달하면 숫자 앞에 '*'가 붙습니다. 0으로 설정하면 컨테이너 집계를 비활성화합니다.",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.name": "컨테이너 노드 제한",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "컨테이너 내부를 탐색할 최대 노드 수. 제한에 도달하면 끝에 '+'가 붙습니다. 0으로 설정하면 컨테이너 집계를 비활성화합니다.",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "디버그 표시 텍스트",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "숫자를 입력하여 형식을 테스트합니다 (예: 1234567 → 1.23M). 비워두면 기본값이 사용됩니다.",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "메인 카운터 색상",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "메인 아이템 카운트 텍스트의 색상 (RGBA).",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "컨테이너 카운터 색상",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "컨테이너 아이템 카운트 텍스트의 색상 (RGBA)."
+}

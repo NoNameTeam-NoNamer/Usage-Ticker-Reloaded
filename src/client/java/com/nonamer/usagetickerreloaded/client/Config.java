@@ -11,7 +11,11 @@ import java.nio.file.Paths;
 public class Config {
     public String customText = "";
     public boolean useCommaSeparator = false;
-    public boolean matchNbt = false;
+    public boolean matchNbt = true;
+    public int containerDepthLimit = 5;
+    public int containerNodeLimit = 10000;
+    public int mainCounterColor = 0xFFFFFFFF;
+    public int nbtCounterColor = 0xFF976997;
 
     private static final Path CONFIG_PATH = Paths.get("config/usage-ticker-reloaded/settings.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

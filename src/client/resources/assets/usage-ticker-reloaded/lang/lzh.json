@@ -1,0 +1,21 @@
+{
+  "modmenu.nameTranslation.usage-ticker-reloaded": "用物計數重訂",
+  "modmenu.summaryTranslation.usage-ticker-reloaded": "示手持之物於行囊中之總數。",
+  "modmenu.descriptionTranslation.usage-ticker-reloaded": "輕便之客端囊，示手持之物於行囊中之總數。",
+  "yacl3.config.usage-ticker-reloaded.title": "用物計數重訂 度制",
+  "yacl3.config.usage-ticker-reloaded.general": "總綱",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "以逗代點",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "分釐之符，易點為逗。",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "校NBT",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "計物之時，必NBT相符。",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.name": "器皿探深",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.description": "贆櫝、皮囊中所藏之物，所探至深之層數。至極，前綴「*」。設為零則不探。",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.name": "器皿探節",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "探器皿時所歷節數之極。至極，末綴「+」。設為零則不探。",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "（勘）自撰之文",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "書數以試其式，如1234567作1.23M。空則如常。",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "主計之色",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "主物計文之色（RGBA）。",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "器計之色",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "器中物計文之色（RGBA）。"
+}

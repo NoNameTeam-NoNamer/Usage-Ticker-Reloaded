@@ -1,0 +1,21 @@
+{
+  "modmenu.nameTranslation.usage-ticker-reloaded": "Compteur d'utilisation - Remake",
+  "modmenu.summaryTranslation.usage-ticker-reloaded": "Affiche le nombre d'objets que vous tenez dans votre inventaire.",
+  "modmenu.descriptionTranslation.usage-ticker-reloaded": "Un mod côté client léger qui affiche le nombre restant de l'objet que vous tenez dans votre inventaire.",
+  "yacl3.config.usage-ticker-reloaded.title": "Configuration de Compteur d'utilisation - Remake",
+  "yacl3.config.usage-ticker-reloaded.general": "Général",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "Utiliser la virgule comme séparateur",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "Utiliser ',' au lieu de '.' comme séparateur décimal.",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "Correspondance NBT",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "Exiger que le NBT de l'objet corresponde lors du comptage.",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.name": "Profondeur des conteneurs",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.description": "Profondeur d'imbrication maximale pour scanner les conteneurs (boîtes de shulker, sacs). Un '*' est ajouté devant le nombre lorsque la limite de profondeur est atteinte. La valeur 0 désactive le comptage des conteneurs.",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.name": "Limite de nœuds des conteneurs",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "Nombre maximal de nœuds à visiter dans les conteneurs. Un '+' est ajouté lorsque la limite est atteinte. La valeur 0 désactive le comptage des conteneurs.",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "Texte d'affichage de débogage",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "Entrez un nombre pour tester le formatage (par ex. 1234567 → 1.23M). Laissez vide pour la valeur par défaut.",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "Couleur du compteur principal",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "Couleur du texte du compteur d'objets principal (RGBA).",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "Couleur du compteur de conteneurs",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "Couleur du texte du compteur d'objets dans les conteneurs (RGBA)."
+}

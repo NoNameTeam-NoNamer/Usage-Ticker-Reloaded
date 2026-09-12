@@ -14,8 +14,8 @@
   "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "Maximum number of nodes to visit inside containers. A '+' is appended when the limit is reached. Set to 0 to disable container counting.",
   "yacl3.config.usage-ticker-reloaded.customText.name": "Debug Display Text",
   "yacl3.config.usage-ticker-reloaded.customText.description": "Enter a number to test formatting (e.g. 1234567 → 1.23M). Leave empty for default.",
-  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "Main Counter Color",
-  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "Color of the main item count text (RGBA).",
-  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "Container Counter Color",
-  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "Color of the container item count text (RGBA)."
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "Main Counter Colour",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "Colour of the main item count text (RGBA).",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "Container Counter Colour",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "Colour of the container item count text (RGBA)."
 }

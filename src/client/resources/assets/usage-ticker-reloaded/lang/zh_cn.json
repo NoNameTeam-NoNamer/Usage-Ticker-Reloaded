@@ -1,10 +1,21 @@
 {
+  "modmenu.nameTranslation.usage-ticker-reloaded": "物品计数器重制版",
+  "modmenu.summaryTranslation.usage-ticker-reloaded": "显示手持物品在背包中的总数。",
+  "modmenu.descriptionTranslation.usage-ticker-reloaded": "轻量级客户端模组，显示你手持的物品在背包中的总数。",
   "yacl3.config.usage-ticker-reloaded.title": "物品计数器重制版 配置",
   "yacl3.config.usage-ticker-reloaded.general": "通用",
   "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "使用逗号作为小数分隔符",
   "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "使用 ',' 代替 '.' 作为小数分隔符。",
   "yacl3.config.usage-ticker-reloaded.matchNbt.name": "匹配 NBT",
-  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "计数时要求物品的 NBT 数据完全一致。例如，附魔不同的附魔书不会被合并统计。",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "计数时要求物品的 NBT 数据完全一致。",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.name": "容器递归深度",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.description": "容器（潜影盒、收纳袋）内物品的最大扫描层数。达到深度上限时会在数字前显示 '*'。设为 0 表示不统计容器内容。",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.name": "容器节点上限",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "扫描容器时最多访问的节点数。达到上限时会在末尾显示 '+'。设为 0 表示不统计容器内容。",
   "yacl3.config.usage-ticker-reloaded.customText.name": "（调试）自定义文本",
-  "yacl3.config.usage-ticker-reloaded.customText.description": "输入数字可测试格式化效果（1234567 → 1.23M）。留空则显示默认计数。"
+  "yacl3.config.usage-ticker-reloaded.customText.description": "输入数字可测试格式化效果（1234567 → 1.23M）。留空则显示默认计数。",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "主计数器颜色",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "主物品计数文字的颜色（RGBA）。",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "容器计数器颜色",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "容器物品计数文字的颜色（RGBA）。"
 }

@@ -1,0 +1,21 @@
+{
+  "modmenu.nameTranslation.usage-ticker-reloaded": "Переиздание счётчика использования",
+  "modmenu.summaryTranslation.usage-ticker-reloaded": "Показывает количество предмета в вашем инвентаре, который вы держите в руке.",
+  "modmenu.descriptionTranslation.usage-ticker-reloaded": "Лёгкий клиентский мод, показывающий оставшееся количество предмета, который вы держите в руке, в вашем инвентаре.",
+  "yacl3.config.usage-ticker-reloaded.title": "Настройки Переиздание счётчика использования",
+  "yacl3.config.usage-ticker-reloaded.general": "Общие",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "Использовать запятую как разделитель",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "Использовать ',' вместо '.' в качестве десятичного разделителя.",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "Совпадение NBT",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "Требовать совпадения NBT предмета при подсчёте.",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.name": "Глубина контейнеров",
+  "yacl3.config.usage-ticker-reloaded.containerDepthLimit.description": "Максимальная глубина вложенности для сканирования контейнеров (шалкеров, мешков). При достижении лимита глубины перед числом добавляется '*'. Значение 0 отключает подсчёт в контейнерах.",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.name": "Лимит узлов контейнеров",
+  "yacl3.config.usage-ticker-reloaded.containerNodeLimit.description": "Максимальное число узлов для обхода внутри контейнеров. При достижении лимита добавляется '+'. Значение 0 отключает подсчёт в контейнерах.",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "Отладочный текст",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "Введите число для проверки форматирования (например, 1234567 → 1.23M). Оставьте пустым для значения по умолчанию.",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.name": "Цвет основного счётчика",
+  "yacl3.config.usage-ticker-reloaded.mainCounterColor.description": "Цвет текста основного счётчика предметов (RGBA).",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.name": "Цвет счётчика контейнеров",
+  "yacl3.config.usage-ticker-reloaded.nbtCounterColor.description": "Цвет текста счётчика предметов в контейнерах (RGBA)."
+}
