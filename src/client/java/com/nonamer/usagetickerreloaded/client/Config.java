@@ -17,19 +17,17 @@ public class Config {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static Config load() {
-        if (Files.exists(CONFIG_PATH)) {
-            try {
-                String json = Files.readString(CONFIG_PATH);
-                return GSON.fromJson(json, Config.class);
-            } catch (IOException ignored) {}
+        if(Files.exists(CONFIG_PATH)){
+            try{return GSON.fromJson(Files.readString(CONFIG_PATH), Config.class);}
+            catch(IOException ignored){}
         }
         return new Config();
     }
 
     public void save() {
-        try {
+        try{
             Files.createDirectories(CONFIG_PATH.getParent());
             Files.writeString(CONFIG_PATH, GSON.toJson(this));
-        } catch (IOException ignored) {}
+        }catch(IOException ignored){}
     }
 }
