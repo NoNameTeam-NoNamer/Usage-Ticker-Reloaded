@@ -1,6 +1,6 @@
 # Usage Ticker Reloaded
 
-![Mod Version](https://img.shields.io/badge/version-1.2.0-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-yellowgreen) ![Side](https://img.shields.io/badge/Client-side-00bbee) ![Config](https://img.shields.io/badge/Config-Available-purple) [![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=round&logo=modrinth)](https://modrinth.com/mod/usage-ticker-reloaded)
+![Mod Version](https://img.shields.io/badge/version-1.2.1-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-yellowgreen) ![Side](https://img.shields.io/badge/Client-side-00bbee) ![Config](https://img.shields.io/badge/Config-Available-purple) [![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=round&logo=modrinth)](https://modrinth.com/mod/usage-ticker-reloaded)
 
 **Usage Ticker Reloaded** is a lightweight client-side Fabric mod that replicates the popular "Usage Ticker" feature from the [Quark mod](https://github.com/VazkiiMods/Quark) for modern Minecraft versions (≥26.1). Since [the original Usage Ticker mod](https://modrinth.com/mod/usage-ticker) hasn't been updated for a long time, I made this similar mod. It displays the icon and total count of the item you're holding, beside your hotbar.
 
