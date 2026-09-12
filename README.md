@@ -85,6 +85,7 @@ A: Yes. Container counting is on by default and can be tuned or disabled via the
 
 **Q: Will my game lag if I carry heavily nested containers?**  
 A: No. Container scanning is protected by both a depth limit and a node limit. A `*` prefix is shown when the depth limit is reached, and a `+` suffix is shown when the node limit is reached. Both can appear together as `*123+`.
+
 ---
 
 ## ✒️ Developing
