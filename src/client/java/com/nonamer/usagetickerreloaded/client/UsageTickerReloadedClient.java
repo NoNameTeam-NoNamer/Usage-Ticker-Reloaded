@@ -57,8 +57,13 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 						offItem = ItemStack.EMPTY;
 					}
 
-					if (!offItem.isEmpty() && ItemStack.isSameItem(mainItem, offItem)) {
-						offItem = ItemStack.EMPTY;
+					if (!offItem.isEmpty()) {
+						boolean same = config.matchNbt
+								? ItemStack.isSameItemSameComponents(mainItem, offItem)
+								: ItemStack.isSameItem(mainItem, offItem);
+						if (same) {
+							offItem = ItemStack.EMPTY;
+						}
 					}
 
 					int mainCount = countItems(player, mainItem);
@@ -99,8 +104,13 @@ public class UsageTickerReloadedClient implements ClientModInitializer {
 		int total = 0;
 		for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
 			ItemStack stack = player.getInventory().getItem(i);
-			if (!stack.isEmpty() && ItemStack.isSameItem(stack, targetStack)) {
-				total += stack.getCount();
+			if (!stack.isEmpty()) {
+				boolean same = config.matchNbt
+						? ItemStack.isSameItemSameComponents(stack, targetStack)
+						: ItemStack.isSameItem(stack, targetStack);
+				if (same) {
+					total += stack.getCount();
+				}
 			}
 		}
 		return total;

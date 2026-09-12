@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 public class Config {
     public String customText = "";
     public boolean useCommaSeparator = false;
+    public boolean matchNbt = false;
 
     private static final Path CONFIG_PATH = Paths.get("config/usage-ticker-reloaded/settings.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

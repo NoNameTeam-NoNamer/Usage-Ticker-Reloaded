@@ -10,29 +10,45 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
 public class ConfigScreen {
+    private static final String PREFIX = "yacl3.config.usage-ticker-reloaded.";
+
     public static Screen create(Screen parent) {
         return YetAnotherConfigLib.createBuilder()
-                .title(Component.literal("Usage Ticker Reloaded Config"))
+                .title(Component.translatable(PREFIX + "title"))
                 .category(ConfigCategory.createBuilder()
-                        .name(Component.literal("General"))
+                        .name(Component.translatable(PREFIX + "general"))
                         .option(Option.<Boolean>createBuilder()
-                                .name(Component.literal("Use Comma Separator"))
+                                .name(Component.translatable(PREFIX + "useCommaSeparator.name"))
                                 .description(OptionDescription.of(
-                                        Component.literal("Use ',' instead of '.' for decimal separator.")))
+                                        Component.translatable(PREFIX + "useCommaSeparator.description")))
                                 .binding(
-                                        false, // 默认值
+                                        false,
                                         () -> UsageTickerReloadedClient.config.useCommaSeparator,
                                         val -> UsageTickerReloadedClient.config.useCommaSeparator = val
                                 )
                                 .controller(opt -> BooleanControllerBuilder.create(opt)
-                                        .coloured(true) // 绿色/红色开关
+                                        .coloured(true)
+                                )
+                                .build()
+                        )
+                        .option(Option.<Boolean>createBuilder()
+                                .name(Component.translatable(PREFIX + "matchNbt.name"))
+                                .description(OptionDescription.of(
+                                        Component.translatable(PREFIX + "matchNbt.description")))
+                                .binding(
+                                        false,
+                                        () -> UsageTickerReloadedClient.config.matchNbt,
+                                        val -> UsageTickerReloadedClient.config.matchNbt = val
+                                )
+                                .controller(opt -> BooleanControllerBuilder.create(opt)
+                                        .coloured(true)
                                 )
                                 .build()
                         )
                         .option(Option.<String>createBuilder()
-                                .name(Component.literal("Debug Display Text"))
+                                .name(Component.translatable(PREFIX + "customText.name"))
                                 .description(OptionDescription.of(
-                                        Component.literal("Enter a number to test formatting (e.g. 1234567 → 1.23M). Leave empty for default.")))
+                                        Component.translatable(PREFIX + "customText.description")))
                                 .binding(
                                         "",
                                         () -> UsageTickerReloadedClient.config.customText,

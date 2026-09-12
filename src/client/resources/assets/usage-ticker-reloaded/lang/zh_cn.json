@@ -1,0 +1,10 @@
+{
+  "yacl3.config.usage-ticker-reloaded.title": "物品计数器重制版 配置",
+  "yacl3.config.usage-ticker-reloaded.general": "通用",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "使用逗号作为小数分隔符",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "使用 ',' 代替 '.' 作为小数分隔符。",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "匹配 NBT",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "计数时要求物品的 NBT 数据完全一致。例如，附魔不同的附魔书不会被合并统计。",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "（调试）自定义文本",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "输入数字可测试格式化效果（1234567 → 1.23M）。留空则显示默认计数。"
+}

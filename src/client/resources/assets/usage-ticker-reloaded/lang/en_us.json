@@ -1,0 +1,10 @@
+{
+  "yacl3.config.usage-ticker-reloaded.title": "Usage Ticker Reloaded Config",
+  "yacl3.config.usage-ticker-reloaded.general": "General",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.name": "Use Comma Separator",
+  "yacl3.config.usage-ticker-reloaded.useCommaSeparator.description": "Use ',' instead of '.' for decimal separator.",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.name": "Match NBT",
+  "yacl3.config.usage-ticker-reloaded.matchNbt.description": "Require item NBT to match when counting. For example, enchanted books with different enchantments won't be combined.",
+  "yacl3.config.usage-ticker-reloaded.customText.name": "Debug Display Text",
+  "yacl3.config.usage-ticker-reloaded.customText.description": "Enter a number to test formatting (1234567 → 1.23M). Leave empty for default."
+}
