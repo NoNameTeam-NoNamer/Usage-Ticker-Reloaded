@@ -2,7 +2,7 @@
 
 ![Mod Version](https://img.shields.io/badge/version-1.2.1-blue) ![Minecraft](https://img.shields.io/badge/Minecraft-26.1+-green) ![Fabric](https://img.shields.io/badge/Fabric-0.19.3+-yellowgreen) ![Side](https://img.shields.io/badge/Client-side-00bbee) ![Config](https://img.shields.io/badge/Config-Available-purple) [![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=round&logo=modrinth)](https://modrinth.com/mod/usage-ticker-reloaded)
 
-**Usage Ticker Reloaded** is a lightweight client-side Fabric mod that replicates the popular "Usage Ticker" feature from the [Quark mod](https://github.com/VazkiiMods/Quark) for modern Minecraft versions (≥26.1). Since [the original Usage Ticker mod](https://modrinth.com/mod/usage-ticker) hasn't been updated for a long time, I made this similar mod. It displays the icon and total count of the item you're holding, beside your hotbar.
+**Usage Ticker Reloaded** is a lightweight client-side Fabric mod that replicates the popular "Usage Ticker" feature from the [Quark mod](https://github.com/VazkiiMods/Quark) for modern Minecraft versions (≥26.1). Since the [original Usage Ticker mod](https://modrinth.com/mod/usage-ticker) hasn't been updated for a long time, I made this similar mod. It displays the icon and total count of the item you're holding, beside your hotbar.
 
 > **Note:** This mod is **client-side only**. It does nothing when installed on a dedicated server.
 
@@ -22,7 +22,7 @@
 
 ## ⚙️ Configs
 
-Open via **Mod Menu** (requires [YACL](https://modrinth.com/mod/yacl)).
+Open via [Mod Menu](https://modrinth.com/mod/modmenu) (requires [YACL](https://modrinth.com/mod/yacl)).
 
 -   **Decimal separator** – Switch between `.` and `,`
 -   **Match NBT** – Only count items whose NBT matches exactly (default: on)
@@ -69,7 +69,7 @@ The built JAR will be placed in `build/libs/`.
 | 26.1            | ✅ Fully tested                                                             |
 | 1.21.1 or below | ⚠️ You should use [the original mod](https://modrinth.com/mod/usage-ticker) |
 
-If you encounter any incompatibility in the tested versions above, please report it via the issue tracker.
+If you encounter any incompatibility in the tested versions above, please report it via the [issue tracker](https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded/issues).
 
 ---
 
