@@ -61,18 +61,22 @@ The built JAR will be placed in `build/libs/`.
 
 ## 📋 Compatibility
 
-| Minecraft       | Fabric Loader | Status                                                                      |
-|:----------------|:--------------|:----------------------------------------------------------------------------|
-| 26.3 SNAPSHOTS  | 0.19.3+       | ❔ Maybe work                                                               |
-| 26.2            | 0.19.3+       | ✅ Fully tested                                                             |
-| 26.1            | 0.19.3+       | ✅ Fully tested                                                             |
-| 1.21.1 or below | -             | ⚠️ You should use [the original mod](https://modrinth.com/mod/usage-ticker) |
+| Minecraft       | Status                                                                      |
+|:----------------|:----------------------------------------------------------------------------|
+| 26.4 SNAPSHOTS  | ❔ Maybe work                                                               |
+| 26.3            | ✅ Fully tested                                                             |
+| 26.2            | ✅ Fully tested                                                             |
+| 26.1            | ✅ Fully tested                                                             |
+| 1.21.1 or below | ⚠️ You should use [the original mod](https://modrinth.com/mod/usage-ticker) |
 
 If you encounter any incompatibility in the tested versions above, please report it via the issue tracker.
 
 ---
 
 ## ❓ FAQ
+
+**Q: Can I configure the mod without Mod Menu?**  
+A: Yes. Edit `.minecraft/config/usage-ticker-reloaded/settings.json` manually and restart the game. Mod Menu + YACL only provide a GUI for the same file.
 
 **Q: Will you support versions below 26.1 or other loaders?**  
 A: I won't, since I don't have time. However, if you have the ability to do that, feel free to [submit a pull request](https://github.com/NoNameTeam-NoNamer/Usage-Ticker-Reloaded/pulls).
